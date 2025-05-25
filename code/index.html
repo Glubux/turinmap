@@ -13,32 +13,21 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400..700;1,400..700&family=Lexend+Giga:wght@100..900&family=Saira+Semi+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-
-  <style>
-    
-  </style>
 </head>
 <body class="font_cuprum">
   <header>
     <h1 id="title">Interaktive Karte Turin</h1>
   </header>
   
-  <div class="map_area">
-    
-    <div id="map"></div>
-    <div class="map_side">
-          
-      <div class="image_area">
-        <img class="image_large" id="image_large" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_7V67TTbQsu_nMpJ_NVjiiG-A1ftTV8eLvg&s" alt="">
-      </div>
+  <div class="content">
+    <div class="map_area">
+      <div id="map" class="map_full"></div>
+      <div id="image_panel" class="image_panel hidden"></div>
     </div>
-    
     <div class="control_area">
       <div class="checkbox-wrapper-6 controls" id="controls"></div>
     </div>
   </div>
-
-  
   
 
   <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
@@ -59,7 +48,7 @@
       if (entry.images && entry.images.length) {
         html += `<div class="popup-imgs">`;
         entry.images.forEach(url => {
-          html += `<img src="${url}">`;
+          html += `<img src="${url}">`; /*onclick="open_image('${url}')"*/
         });
         html += `</div>`;
       }
@@ -94,6 +83,17 @@
       });
     }
 
+    function open_image(url) {
+      const mapDiv = document.getElementById("map");
+      const imagePanel = document.getElementById("image_panel");
+
+      mapDiv.classList.remove("map_full");
+      mapDiv.classList.add("map_split");
+
+      imagePanel.classList.remove("hidden");
+      imagePanel.innerHTML = `<img src="${url}" alt="Großansicht">`;
+    }
+
     fetch('data.json')
     .then(res => res.json())
     .then(entries => {
@@ -107,7 +107,14 @@
         // Ein einziges Layer-Objekt erstellen
         switch (entry.type) {
           case "marker":
-            layer = L.marker(entry.coords).bindPopup(popup);
+            layer = L.marker(entry.coords)
+            .bindPopup(popup)
+            .on("click", () => {
+              if (entry.images && entry.images.length) {
+                open_image(entry.images[0]);
+              }
+            });
+
             break;
           case "circle":
             layer = L.circle(entry.coords, {
@@ -115,19 +122,37 @@
               fillColor: entry.fill_color || '#f03',
               fillOpacity: entry.transparency || 0.5,
               radius: entry.radius || 200
-            }).bindPopup(popup);
+            })
+            .bindPopup(popup)
+            .on("click", () => {
+              if (entry.images && entry.images.length) {
+                open_image(entry.images[0]);
+              }
+            });
             break;
           case "routes":
             layer = L.polyline(entry.coords, {
               color: entry.color || 'blue'
-            }).bindPopup(popup);
+            })
+            .bindPopup(popup)
+            .on("click", () => {
+              if (entry.images && entry.images.length) {
+                open_image(entry.images[0]);
+              }
+            });
             break;
           case "polygon":
             layer = L.polygon(entry.coords, {
               color: entry.color || "blue",
               fillColor: entry.fill_color || '#f03',
               fillOpacity: entry.transparency || 0.5,
-            }).bindPopup(popup);
+            })
+            .bindPopup(popup)
+            .on("click", () => {
+              if (entry.images && entry.images.length) {
+                open_image(entry.images[0]);
+              }
+            });
             break;
           default:
             console.warn("Unbekannter Typ:", entry.type);
