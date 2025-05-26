@@ -22,7 +22,9 @@
   <div class="content">
     <div class="map_area">
       <div id="map" class="map_full"></div>
-      <div id="image_panel" class="image_panel hidden"></div>
+      <div id="image_panel" class="image_panel hidden">
+      
+      </div>
     </div>
     <div class="control_area">
       <div class="checkbox-wrapper-6 controls" id="controls"></div>
@@ -32,10 +34,18 @@
 
   <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
   <script>
+    let image_index = 0;
+    let image_urls = [];
+
     const map = L.map('map').setView([45.066667, 7.7], 13);
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       attribution: '© OpenStreetMap'
     }).addTo(map);
+
+    map.on('popupclose', function (e) {
+      close_image();
+    });
+
 
     const tagStatus = {}; // Speichert den Aktivierungsstatus jeder Tag-Checkbox
     const tagToEntries = {}; // tag -> Liste der Einträge
@@ -44,21 +54,16 @@
     function generatePopupContent(entry) {
       let html = "";
       if (entry.title) html += `<b>${entry.title}</b><br>`;
+      /*
       if (entry.text) html += `${entry.text}<br>`;
       if (entry.images && entry.images.length) {
         html += `<div class="popup-imgs">`;
         entry.images.forEach(url => {
-          html += `<img src="${url}">`; /*onclick="open_image('${url}')"*/
+          html += `<img src="${url}" onclick="open_image('${url}')" >`; 
         });
         html += `</div>`;
       }
-      if (entry.buttons && entry.buttons.length) {
-        html += `<div class="popup-buttons">`;
-        entry.buttons.forEach(btn => {
-          html += `<button onclick="${btn.action}">${btn.label}</button>`;
-        });
-        html += `</div>`;
-      }
+      */
       return html;
     }
 
@@ -83,7 +88,46 @@
       });
     }
 
-    function open_image(url) {
+    function update_image(dir) {
+      image_index += dir;
+
+      if (image_index < 0) image_index = 0;
+      if (image_index >= image_urls.length) image_index = image_urls.length - 1;
+
+      const imagePanel = document.getElementById("image_panel");
+
+      imagePanel.innerHTML = `
+        <button id="left_btn" onclick="update_image(-1)">&#10094;</button>
+        <img src="${image_urls[image_index]}" alt="${image_urls[image_index]}">
+        <button id="right_btn" onclick="update_image(1)">&#10095;</button>
+        <button class="button_close" onclick="close_image()">X</button>
+      `;
+      
+      const leftBtn = document.getElementById("left_btn");
+      const rightBtn = document.getElementById("right_btn");
+      
+      if (image_urls.length <= 1) {
+        leftBtn.classList.add("invisible");
+        rightBtn.classList.add("invisible");
+      } else {
+        if (image_index === 0) {
+          leftBtn.classList.add("invisible");
+        } else {
+          leftBtn.classList.remove("invisible");
+        }
+
+        if (image_index === image_urls.length - 1) {
+          rightBtn.classList.add("invisible");
+        } else {
+          rightBtn.classList.remove("invisible");
+        }
+      }
+    }
+
+    function open_image(urls) {
+      image_index = 0;
+      image_urls = urls;
+
       const mapDiv = document.getElementById("map");
       const imagePanel = document.getElementById("image_panel");
 
@@ -91,7 +135,18 @@
       mapDiv.classList.add("map_split");
 
       imagePanel.classList.remove("hidden");
-      imagePanel.innerHTML = `<img src="${url}" alt="Großansicht">`;
+
+      update_image(0);
+    }
+
+    function close_image() {
+      const mapDiv = document.getElementById("map");
+      const imagePanel = document.getElementById("image_panel");
+
+      mapDiv.classList.remove("map_split");
+      mapDiv.classList.add("map_full");
+
+      imagePanel.classList.add("hidden");
     }
 
     fetch('data.json')
@@ -111,7 +166,7 @@
             .bindPopup(popup)
             .on("click", () => {
               if (entry.images && entry.images.length) {
-                open_image(entry.images[0]);
+                open_image(entry.images);
               }
             });
 
@@ -126,7 +181,7 @@
             .bindPopup(popup)
             .on("click", () => {
               if (entry.images && entry.images.length) {
-                open_image(entry.images[0]);
+                open_image(entry.images);
               }
             });
             break;
@@ -137,7 +192,7 @@
             .bindPopup(popup)
             .on("click", () => {
               if (entry.images && entry.images.length) {
-                open_image(entry.images[0]);
+                open_image(entry.images);
               }
             });
             break;
@@ -150,13 +205,10 @@
             .bindPopup(popup)
             .on("click", () => {
               if (entry.images && entry.images.length) {
-                open_image(entry.images[0]);
+                open_image(entry.images);
               }
             });
             break;
-          default:
-            console.warn("Unbekannter Typ:", entry.type);
-            return;
         }
 
         // Speichern mit Tags
