@@ -69,5 +69,244 @@
     "images": [
       "https://galk.de/images/bilder/baum_des_jahres/2025_Quercus_rubra_Quelle_Dietrich_400x600.jpg"
     ]
+  },
+
+
+
+
+  {
+    "type": "marker",
+    "tag": ["natur"],
+    "coords": [45.05615, 7.68526],
+    "title": "San Salvario",
+    "text": "Eine wilde Rebe",
+    "images": [
+      "IMG_7243.JPG",
+      "IMG_7244.JPG",
+      "IMG_7245.JPG",
+      "IMG_7246.JPG",
+      "IMG_7247.JPG",
+      "IMG_7248.JPG",
+      "IMG_7250.JPG"
+    ]
+  },
+  {
+    "type": "marker",
+    "tag": ["natur"],
+    "coords": [45.05429, 7.68433],
+    "title": "Tramstation San Salvario",
+    "text": "",
+    "images": [
+      "IMG_7237.JPG",
+      "IMG_7240.JPG",
+      "IMG_7241.JPG"
+    ]
+  },
+  {
+    "type": "marker",
+    "tag": ["natur"],
+    "coords": [45.04617, 7.65804],
+    "title": "Caserma Morelli di Popolo",
+    "text": "",
+    "images": [
+      "IMG_7189.JPG",
+      "IMG_7197.JPG",
+      "IMG_7199.JPG",
+      "IMG_8081.JPG",
+      "IMG_8101.JPG"
+    ]
+  },
+  {
+    "type": "marker",
+    "tag": ["natur"],
+    "coords": [45.04416, 7.66281],
+    "title": "Lingotto",
+    "text": "",
+    "images": [
+      "IMG_3523.JPG",
+      "IMG_7201.JPG",
+      "IMG_7203.JPG",
+      "IMG_8115.JPG"
+    ]
+  },
+  {
+    "type": "marker",
+    "tag": ["natur"],
+    "coords": [45.04483, 7.67488],
+    "title": "San Salvario",
+    "text": "",
+    "images": [
+      "IMG_7206.JPG",
+      "IMG_8127.JPG"
+    ]
+  },
+  {
+    "type": "marker",
+    "tag": ["natur"],
+    "coords": [45.13469, 7.62633],
+    "title": "Venaria Reale (Unterkunft)",
+    "text": "",
+    "images": [
+      "IMG_7355.JPG"
+    ]
+  },
+  {
+    "type": "marker",
+    "tag": ["natur"],
+    "coords": [45.05780, 7.63712],
+    "title": "San Paolo",
+    "text": "",
+    "images": [
+      "IMG_7341.JPG"
+    ]
+  },
+  {
+    "type": "marker",
+    "tag": ["natur"],
+    "coords": [45.05886, 7.63745],
+    "title": "San Paolo",
+    "text": "",
+    "images": [
+      "IMG_7345.JPG",
+      "IMG_3815.JPG"
+    ]
+  },
+  {
+    "type": "marker",
+    "tag": ["natur"],
+    "coords": [45.05970, 7.63606],
+    "title": "San Paolo",
+    "text": "",
+    "images": [
+      "IMG_7347.JPG"
+    ]
+  },
+  {
+    "type": "marker",
+    "tag": ["natur"],
+    "coords": [45.07160, 7.69014],
+    "title": "Giardini Reali",
+    "text": "",
+    "images": [
+      "IMG_8310.JPG"
+    ]
+  },
+  {
+    "type": "marker",
+    "tag": ["natur"],
+    "coords": [45.06962, 7.69262],
+    "title": "Centro",
+    "text": "",
+    "images": [
+      "IMG_7304.JPG",
+      "IMG_7305.JPG"
+    ]
+  },
+  {
+    "type": "marker",
+    "tag": ["natur"],
+    "coords": [45.06684, 7.67194],
+    "title": "Centro",
+    "text": "",
+    "images": [
+      "IMG_7310.JPG"
+    ]
+  },
+  {
+    "type": "marker",
+    "tag": ["natur"],
+    "coords": [45.05401, 7.68498],
+    "title": "Parco del Valentione",
+    "text": "",
+    "images": [
+      "IMG_7233.JPG",
+      "IMG_7234.JPG",
+      "IMG_7235.JPG",
+      "IMG_7236.JPG",
+      "IMG_8244.JPG"
+    ]
+  },
+  {
+    "type": "marker",
+    "tag": ["natur"],
+    "coords": [45.06606, 7.70348],
+    "title": "Borgo Po",
+    "text": "",
+    "images": [
+      "IMG_7281.JPG",
+      "IMG_7285.JPG",
+      "IMG_8242.JPG"      
+    ]
+  },
+  {
+    "type": "marker",
+    "tag": ["natur"],
+    "coords": [45.04714, 7.68223],
+    "title": "San Salvario",
+    "text": "",
+    "images": [
+      "IMG_7208.JPG"    
+    ]
+  },
+  {
+    "type": "marker",
+    "tag": ["natur"],
+    "coords": [45.05637, 7.68470],
+    "title": "San Salvario",
+    "text": "",
+    "images": [
+      "IMG_7251.JPG"    
+    ]
+  },
+  {
+    "type": "marker",
+    "tag": ["natur"],
+    "coords": [45.07254, 7.69141],
+    "title": "Giardini Reali",
+    "text": "",
+    "images": [
+      "IMG_7307.JPG"    
+    ]
+  },
+
+
+
+
+
+  {
+    "type": "marker",
+    "tag": ["tiere"],
+    "coords": [45.06641, 7.70563],
+    "title": "Borgo Po",
+    "text": "Nebelkrähe",
+    "images": [
+      "IMG_3628.JPG",
+      "IMG_3629.JPG"    
+    ]
+  },
+  {
+    "type": "marker",
+    "tag": ["tiere"],
+    "coords": [45.04569, 7.65157],
+    "title": "Parco Cavalieri di Vittorio Veneto",
+    "text": "Schildkröte",
+    "images": [
+      "IMG_7192.JPG",
+      "IMG_8064.JPG"    
+    ]
+  },
+  {
+    "type": "marker",
+    "tag": ["tiere"],
+    "coords": [45.04968, 7.68418],
+    "title": "Giardino Roccioso",
+    "text": "Grauhörnchen & Stockente",
+    "images": [
+      "IMG_8188.JPG",
+      "IMG_3568.JPG",
+      "IMG_8198.JPG",
+      "IMG_7224.JPG",
+      "IMG_7229.JPG" 
+    ]
   }
 ]
