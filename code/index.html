@@ -24,8 +24,10 @@
       <h1>Arbeitswoche Turin</h1>
       <h3>12. - 16. Mai 2025</h3>
       <p>
-        Im Rahmen unserer Arbeitswoche reisten wir als 4D nach Turin, um die Stadt aus verschiedenen Perspektiven zu erkunden. Während unseres Aufenthalts haben wir Museen besucht, Parks entdeckt und viele Eindrücke gesammelt. Diese digitale Karte dokumentiert unsere Besuche und Erlebnisse. Sie beinhaltet viele Fotos, Zeichnung, Videos und Tonaufnahmen.
-      </p>
+        Im Rahmen unserer Arbeitswoche reisten wir als 4D nach Turin, um die Stadt mit verschiedenen Medien und nach inhaltlichen Schwerpunkten zu erkunden.
+        Während unseres Aufenthalts haben wir Museen besucht, Parks entdeckt und viele Eindrücke gesammelt. Unsere Themen waren das Zusammenspiel von Natur und Stadt, moderne Architektur, historische Architektur und die Geräusche der Stadt Turin. Die Ergebnisse unserer Untersuchungen haben wir in einer Art Kartografie zusammengeführt.
+        Diese digitale Karte dokumentiert nun unsere Untersuchungen und Erlebnisse in Turin mit vielen Fotos, Zeichnungen, Videos und Tonaufnahmen.
+    </p>
       
     </div>
     <div class="bild"></div>
@@ -116,14 +118,25 @@
       imagePanel.innerHTML = `
         <button id="left_btn" onclick="update_image(-1)">&#10094;</button>
       `;
-      
-      imagePanel.innerHTML += `
-        <img src="../images/${current_entry.tag}/${current_entry.images[image_index]}" alt="../images/${current_entry.tag}/${current_entry.images[image_index]}">
-      `;
+
+      if (current_entry.images[image_index].slice(-3).toLowerCase() == "mov") {
+        imagePanel.innerHTML += `
+          <video controls src="../images/${current_entry.tag[0]}/${current_entry.images[image_index]}">Dein Browser unterstützt dieses Video nicht.</video>
+        `;
+      } else if (current_entry.images[image_index].slice(-3).toLowerCase() == "wav") {
+        imagePanel.innerHTML += `
+          <audio src="../images/${current_entry.tag[0]}/${current_entry.images[image_index]}">Dein Browser unterstützt diese Audio nicht.</audio>
+        `
+      } else {
+        imagePanel.innerHTML += `
+          <img src="../images/${current_entry.tag[0]}/${current_entry.images[image_index]}" alt="../images/${current_entry.tag[0]}/${current_entry.images[image_index]}">
+        `;
+      }
 
       imagePanel.innerHTML += `
         <button id="right_btn" onclick="update_image(1)">&#10095;</button>
         <button class="button_close" onclick="close_image()">X</button>
+        <p>${current_entry.images[image_index]}</p>
       `;
       
       const leftBtn = document.getElementById("left_btn");
@@ -247,7 +260,7 @@
         tags.forEach(tag => {
           if (!seenTags.has(tag)) {
             seenTags.add(tag);
-            tagStatus[tag] = true; // initial sichtbar
+            tagStatus[tag] = false; // initial sichtbar
 
             // Checkbox-Element erzeugen
             const labelWrapper = document.createElement("div");
@@ -256,7 +269,7 @@
             const id = `cb-${tag.replace(/\s+/g, '-')}`; // sichere ID
 
             labelWrapper.innerHTML = `
-              <input class="tgl tgl-light" id="${id}" type="checkbox" checked onchange="toggleLayer('${tag}')" />
+              <input class="tgl tgl-light" id="${id}" type="checkbox" onchange="toggleLayer('${tag}')" />
               <label class="tgl-btn" for="${id}"></label>
               <span class="checkbox-label">${tag}</span>
             `;

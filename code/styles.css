@@ -110,7 +110,8 @@ header {
 
 }
 
-.image_panel img {
+.image_panel img,
+.image_panel video {
   width: 84%;
   height: auto;
   max-width: 100%;
@@ -118,7 +119,6 @@ header {
   display: block;
   object-fit: contain;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
-
 }
 
 .image_panel button {

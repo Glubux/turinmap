@@ -1,0 +1,18 @@
+[
+  {
+    "type": "Restaurant",
+    "title": "Pizza da Mario",
+    "description": "Beste Pizza der Stadt.",
+    "lat": 47.3769,
+    "lng": 8.5417,
+    "image": "https://example.com/pizza.jpg"
+  },
+  {
+    "type": "Sehenswürdigkeit",
+    "title": "Grossmünster",
+    "description": "Berühmte Kirche in Zürich.",
+    "lat": 47.3709,
+    "lng": 8.5430,
+    "image": "https://example.com/kirche.jpg"
+  }
+]
