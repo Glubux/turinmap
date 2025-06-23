@@ -1,0 +1,322 @@
+body {
+  margin: 0;
+  background-color: #f5f5f5;
+  font-size: 16px;
+}
+.font_cuprum {
+  font-family: "Cuprum", sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  font-optical-sizing: auto;
+}
+
+header {
+  background: linear-gradient(90deg, #008C45 0%, #FFFFFF 35%,#FFFFFF 65%,  #CD212A);
+  width: 100%;
+  height: 100px;
+  padding-left: 10px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+}
+#titel {
+  margin: 0;
+}
+
+.content_einleitung {
+  margin: 40px auto;
+  max-width: 80%;
+  padding: 0 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  box-sizing: border-box;
+}
+
+.content_text {
+  flex: 1 1 300px;
+  padding: 10px;
+  min-width: 280px;
+  box-sizing: border-box;
+}
+
+.content_einleitung h1 {
+  margin-bottom: 0px;
+}
+
+.content_einleitung h3 {
+  margin-top: 0px;
+}
+
+.bild {
+  flex: 1 1 300px;
+  min-width: 280px;
+  min-height: 300px;
+  background-color: green;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  box-sizing: border-box;
+  max-width: 600px;
+  height: auto;
+}
+
+
+#controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 10px 0;
+  box-sizing: border-box;
+}
+
+.control_area {
+  display: flex;
+  align-items: center;
+  overflow-x: auto;
+  padding: 10px 20px;
+  box-sizing: border-box;
+}
+
+.content {
+  background-color: #e9e9e9;
+  margin: 20px auto;
+  max-width: 80%;
+  height: 85vh;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.map_area {
+  background-color: #e9e9e9;
+  flex: 1 1 auto;
+  display: flex;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  min-height: 400px;
+  box-sizing: border-box;
+}
+
+#map {
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  height: 100%;
+  min-width: 300px;
+  flex-grow: 1;
+  box-sizing: border-box;
+}
+
+.map_full {
+  flex: 1 1 100%;
+}
+
+.map_split {
+  flex: 0 0 50%;
+  max-width: 50%;
+  box-sizing: border-box;
+}
+
+.image_panel {
+  flex: 0 0 50%;
+  max-height: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 10px;
+}
+
+.image_panel img,
+.image_panel video {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+  object-fit: contain;
+}
+
+.image_panel button {
+  width: 30px;
+  height: 30px;
+  background-color: rgba(0, 0, 0, 0.4);
+  border: none;
+  color: white;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 8px;
+  margin: 8px;
+}
+
+.image_panel button:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.image_panel .button_close {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+.hidden {
+  display: none;
+}
+.invisible {
+  visibility: hidden;
+  pointer-events: none;
+}
+
+
+/* Popup auf der Karte */
+.popup-imgs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 5px;
+}
+.popup-imgs img {
+  width: 100px;
+  border-radius: 4px;
+}
+
+
+/* Checkbox */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+}
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: #ccc;
+  transition: 0.3s;
+  border-radius: 20px;
+}
+
+input:checked + .slider {
+  background-color: var(--tag-color, #585858);
+}
+
+.slider::before {
+  position: absolute;
+  content: "";
+  height: 14px;
+  width: 14px;
+  left: 3px;
+  bottom: 3px;
+  background-color: var(--tag-color, #585858);
+  transition: 0.3s;
+  border-radius: 50%;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
+input:checked + .slider::before {
+  transform: translateX(20px);
+  background-color: white;
+}
+
+
+.gruppen-eintrag{
+  display: flex;
+  align-items: center;
+}
+.gruppenliste img {
+  height: 30px;
+  margin-right: 10px;
+  margin-bottom: 5px;
+}
+
+.site-footer {
+  font-size: 0.8em;
+  text-align: center;
+  color: #888;
+  background: #f9f9f9;
+  border-top: 1px solid #ddd;
+  padding: 5px;
+}
+.site-footer p {
+  margin: 5px;
+}
+.site-footer a {
+  text-decoration: none;
+  color: #515981;
+}
+.site-footer a:hover {
+  text-decoration: none;
+  color: #99aaff;
+}
+
+
+.forbidden_icon {
+  width: 120px;
+  height: 120px;
+  margin-bottom: 30px;
+  fill: #CD212A;
+  filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.2));
+}
+
+a.button-back {
+  display: inline-block;
+  padding: 12px 25px;
+  background: #008C45; /* Grün aus Header */
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 140, 69, 0.4);
+}
+
+a.button-back:hover {
+  background-color: #006933;
+  box-shadow: 0 6px 12px rgba(0, 105, 52, 0.6);
+}
+
+main {
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+main h1 {
+  font-size: 2.5rem;
+  color: #CD212A; /* Rot aus Header */
+  margin-bottom: 10px;
+}
+
+main p {
+  font-size: 1.25rem;
+  margin-bottom: 30px;
+  line-height: 1.4;
+}
+
+.body_forbidden {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: "Cuprum", sans-serif;
+  background-color: #f5f5f5;
+  margin: 0;
+  color: #333;
+  text-align: center;
+}

@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Arbeitswoche Turin</title>
+  <meta charset="utf-8" />
+
+  <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Stemma_di_Torino_%28CoA_of_Turin%29_heraldic_%282023%29.svg/309px-Stemma_di_Torino_%28CoA_of_Turin%29_heraldic_%282023%29.svg.png">
+
+  <link rel="stylesheet" href="styles.css">
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400..700;1,400..700&family=Lexend+Giga:wght@100..900&family=Saira+Semi+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+</head>
+<body class="font_cuprum">
+  <header>
+    <h1 id="title">Interaktive Karte Turin</h1>
+  </header>
+
+  <div class="content_einleitung">
+    <div class="content_text">
+      <h1>Arbeitswoche Turin</h1>
+      <h3>12. - 16. Mai 2025</h3>
+      <p>
+        Im Rahmen unserer Arbeitswoche reisten wir als 4D nach Turin, um die Stadt mit verschiedenen Medien und nach inhaltlichen Schwerpunkten zu erkunden.
+        Während unseres Aufenthalts haben wir Museen besucht, Parks entdeckt und viele Eindrücke gesammelt. Unsere Themen waren das Zusammenspiel von Natur und Stadt, moderne Architektur, historische Architektur und die Geräusche der Stadt Turin. Die Ergebnisse unserer Untersuchungen haben wir in einer Art Kartografie zusammengeführt.
+        Diese digitale Karte dokumentiert nun unsere Untersuchungen und Erlebnisse in Turin mit vielen Fotos, Zeichnungen, Videos und Tonaufnahmen.
+      </p>
+      <div class="gruppenliste" id="gruppenliste"></div>
+    </div>
+    <div class="bild"></div>
+  </div>
+   
+   <div class="content">
+    <div class="map_area">
+      <div id="map" class="map_full"></div>
+      <div id="image_panel" class="image_panel hidden"></div>
+    </div>
+    <div class="control_area">
+      <div class="checkbox-wrapper-6 controls" id="controls"></div>
+    </div>
+   </div>
+
+   <footer class="site-footer">
+    <p>&copy; 2025 Arbeitswoche 4D - Website: Andrin, Jonas, Rafael & Flurin</p>
+    <p>Code frei verwendbar mit Verweis auf das Projekt und mit Namensnennung. · Bilder der Klasse 4D urheberrechtlich geschützt</p>
+    <p>Kontakt: <a href="mailto:bess.flur.2021@ksz.edu-zg.ch">bess.flur.2021@ksz.edu-zg.ch</a></p>
+   </footer>
+
+   <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+   <script>
+    let image_index = 0;
+    let current_entry = "";
+    let is_open = false;
+    const tagStatus = {};
+    const allEntries = [];
+    let allTags = [];
+
+    const tagData = {
+      "Parks in Turin": {icon: "gelb.png", color: "#ffcc0b", name: "Rafael, Masashi"},
+      "Neubauten": {icon: "orange.png", color: "#e77e24", name: "Charlotte, Jana, Larina"},
+      "Historische Architektur": {icon: "rot.png", color: "#d4302b", name: "Elias, Janosch, Noah, Rafael"},
+      "Musik": {icon: "pink.png", color: "#ce48ba", name: "Daniel, Ferris, Lou"},
+      "Zusammenspiel Stadt & Natur": {icon: "dunkelblau.png", color: "#444acf", name: "Andrin, Flurin, Jonas"},
+      "BI & BG Lehrpersonen": {icon: "blau.png", color: "#3288cb", name: "Frau Spörri & Herr Cerletti"},
+      "Alle": {color: "#4CAF50"}
+    };
+
+    const map = L.map('map').setView([45.080, 7.685], 12);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '© OpenStreetMap'
+    }).addTo(map);
+
+    map.on('popupclose', () => {
+      if (is_open) close_image();
+    });
+
+    function generateGruppenliste() {
+      const gruppenliste = document.getElementById("gruppenliste");
+      let html = "";
+
+      Object.entries(tagData).forEach(([key, tag]) => {
+        if (key === "Alle") return;
+        html += `
+          <div class="gruppen-eintrag">
+            <img src="/images/marker/${tag.icon}" alt="Icon" class="icon">
+            <b>${key}</b>: ${tag.name}
+          </div>
+       `;
+      });
+
+      gruppenliste.innerHTML = html;
+    }
+
+    function generatePopupContent(entry) {
+      let html = "";
+      if (entry.title) html += `<h3>${entry.title}</h3>`;
+      if (entry.text) html += `${entry.text}<br>`;
+      return html;  
+    }
+
+    function toggleLayer(tag) {
+      if (tag === "Alle") {
+        const isAllChecked = document.getElementById("cb-Alle").checked;
+        allTags.forEach(t => {
+          tagStatus[t] = isAllChecked;
+          const individualCb = document.getElementById(`cb-${t.replace(/\s+/g, '-')}`);
+          if (individualCb) {
+            individualCb.checked = isAllChecked;
+          }
+        });
+      } else {
+        tagStatus[tag] = document.getElementById(`cb-${tag.replace(/\s+/g, '-')}`).checked;
+        
+        const allIndividualTagsActive = allTags.every(t => tagStatus[t]);
+        const allCheckbox = document.getElementById("cb-Alle");
+        if (allCheckbox) {
+          tagStatus["Alle"] = allIndividualTagsActive;
+          allCheckbox.checked = allIndividualTagsActive;
+        }
+      }
+      updateMapVisibility();
+    }
+
+    function updateMapVisibility() {
+      allEntries.forEach(obj => {
+        const isVisible = obj.tags.some(tag => tagStatus[tag]);
+        if (isVisible) {
+            if (!map.hasLayer(obj.layer)) obj.layer.addTo(map);
+        } else {
+          if (map.hasLayer(obj.layer)) map.removeLayer(obj.layer);
+        }
+      });
+    }
+
+    function update_image(dir) {
+      image_index += dir;
+      if (image_index < 0) image_index = 0;
+      if (image_index >= current_entry.images.length) image_index = current_entry.images.length - 1;
+
+      const imagePanel = document.getElementById("image_panel");
+      imagePanel.innerHTML = `<button id="left_btn" onclick="update_image(-1)">&#10094;</button>`;
+
+      const file = current_entry.images[image_index];
+      const ext = file.split('.').pop().toLowerCase();
+      const path = `./images/${current_entry.tag[0]}/${file}`;
+
+      
+      if (ext === "mov" || ext === "mp4") {
+        imagePanel.innerHTML += `<video controls src="${path}">Dein Browser unterstützt dieses Video nicht.</video>`;
+      } else if (ext === "wav") {
+        imagePanel.innerHTML += `<audio controls src="${path}">Dein Browser unterstützt diese Audio nicht.</audio>`;
+      } else if (ext === "mp3") {
+        imagePanel.innerHTML += `<audio controls src="${path}">Dein Browser unterstützt diese Audio nicht.</audio>`;
+      } else {
+        imagePanel.innerHTML += `<img src="${path}" alt="${path}">`;
+      }
+
+      imagePanel.innerHTML += `
+        <button id="right_btn" onclick="update_image(1)">&#10095;</button>
+        <button class="button_close" onclick="close_image()">X</button>
+      `;
+
+      document.getElementById("left_btn").classList.toggle("invisible", image_index === 0);
+      document.getElementById("right_btn").classList.toggle("invisible", image_index === current_entry.images.length - 1);
+    }
+
+    function open_image(input) {
+      image_index = 0;
+      current_entry = input;
+      document.getElementById("map").classList.replace("map_full", "map_split");
+      document.getElementById("image_panel").classList.remove("hidden");
+      update_image(0);
+      is_open = true;
+    }
+
+    function close_image() {
+      document.getElementById("map").classList.replace("map_split", "map_full");
+      document.getElementById("image_panel").classList.add("hidden");
+      is_open = false;
+      map.closePopup();
+    }
+
+    fetch('data.json')
+      .then(res => res.json())
+      .then(entries => {
+        const controlsDiv = document.getElementById('controls');
+        const seenTags = new Set();
+
+        entries.forEach(entry => {
+          const tags = entry.tag || [];
+          tags.forEach(tag => {
+            if (!seenTags.has(tag)) {
+              seenTags.add(tag);
+              allTags.push(tag);
+            }
+          });
+        });
+
+        allTags.forEach(tag => {
+          tagStatus[tag] = true;
+        });
+        tagStatus["Alle"] = true;
+
+
+        const allWrapper = document.createElement("div");
+        allWrapper.classList.add("checkbox-item");
+        allWrapper.innerHTML = `
+          <label class="switch">
+            <input id="cb-Alle" type="checkbox" checked onchange="toggleLayer('Alle')"/>
+            <span class="slider"></span>
+          </label>
+          <span class="checkbox-label">Alle</span>
+        `;
+        controlsDiv.prepend(allWrapper);
+
+        allTags.forEach(tag => {
+          const labelWrapper = document.createElement("div");
+          labelWrapper.classList.add("checkbox-item");
+          const id = `cb-${tag.replace(/\s+/g, '-')}`;
+
+          labelWrapper.innerHTML = `
+            <label class="switch">
+              <input id="${id}" type="checkbox" checked onchange="toggleLayer('${tag}')" />
+              <span class="slider" style="--tag-color: ${tagData[tag].color};"></span>
+            </label>
+            <span class="checkbox-label">${tag}</span>
+          `;
+          controlsDiv.appendChild(labelWrapper);
+        });
+
+        entries.forEach(entry => {
+          const customIcon = L.icon({
+          iconUrl: `images/marker/${tagData[entry.tag[0]].icon}`,
+          shadowUrl: 'https://unpkg.com/leaflet@1.9.3/dist/images/marker-shadow.png',
+          iconSize: [25, 40],
+          iconAnchor: [16, 32],
+          popupAnchor: [0, -32],
+          shadowSize: [41, 41],
+          shadowAnchor: [12, 41]
+        });
+
+        const popup = generatePopupContent(entry);
+        let layer;
+
+        switch (entry.type) {
+          case "marker":
+            layer = L.marker(entry.coords, { icon: customIcon }).bindPopup(popup).on("click", () => {
+              if (entry.images?.length) open_image(entry);
+            });
+            break;
+          case "circle":
+            layer = L.circle(entry.coords, {
+              color: entry.color || 'red',
+              fillColor: entry.fill_color || '#f03',
+              fillOpacity: entry.transparency || 0.5,
+              radius: entry.radius || 200
+            }).bindPopup(popup).on("click", () => {
+              if (entry.images?.length) open_image(entry);
+            });
+            break;
+          case "routes":
+            layer = L.polyline(entry.coords, { color: entry.color || 'blue' })
+              .bindPopup(popup).on("click", () => {
+                if (entry.images?.length) open_image(entry);
+              });
+            break;
+          case "polygon":
+            layer = L.polygon(entry.coords, {
+              color: entry.color || "blue",
+              fillColor: entry.fill_color || '#f03',
+              fillOpacity: entry.transparency || 0.5,
+            }).bindPopup(popup).on("click", () => {
+              if (entry.images?.length) open_image(entry);
+            });
+            break;
+        }
+
+        const tags = entry.tag || [];
+        allEntries.push({ layer, tags });
+
+      });
+          
+      updateMapVisibility();
+    });
+    generateGruppenliste();
+  </script>
+</body>
+</html>

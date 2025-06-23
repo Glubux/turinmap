@@ -1,0 +1,924 @@
+[
+  {
+  "type": "polygon",
+    "tag": ["Parks in Turin"],
+    "coords": [[45.07022571706923, 7.690737726289498],
+    [45.071822095265475, 7.686312444882597],
+    [45.07492948989903, 7.688370845237917],
+    [45.07455596809705, 7.689571196057038],
+    [45.07151298925586, 7.6925102576375]
+    ],
+    "color": "green", 
+    "fill_color": "green",
+    "transparency": 0.4,
+    "title": "Giardini Reali",
+    "text": "",
+    "images": [
+      "IMG-20250522-WA0012.jpg", "IMG-20250522-WA0011.jpg", "IMG-20250522-WA0008.jpg", "WhatsApp Image 2025-05-28 at 09.21.35_2570ef07.jpg", "WhatsApp Image 2025-05-28 at 09.21.35_a0574073.jpg"
+
+    ]
+  
+  },
+
+  {
+    "tag": [
+      "Parks in Turin"
+    ],
+    "title": "Giardino Roccioso",
+    "type": "marker",
+    "coords":[45.049928679195155, 7.684118595607214],
+    "images": [
+      "IMG-20250522-WA0004.jpg", "IMG-20250522-WA0006.jpg", "WhatsApp Image 2025-05-28 at 09.21.35_eed4dc10.jpg", "WhatsApp Image 2025-05-28 at 09.32.10_7dd53102.jpg", "WhatsApp Image 2025-05-28 at 09.32.10_7de84d1d.jpg", "WhatsApp Image 2025-05-28 at 09.32.10_71d6b748.jpg"
+    ]
+  },
+  {
+    "tag": [
+      "Parks in Turin"
+    ],
+    "coords": [45.08971817107817, 7.666702456335861],
+    "title": "Parco Dora",
+    "type": "marker",
+    "images": [
+      "WhatsApp Image 2025-05-28 at 09.21.35_5c81523c.jpg", "WhatsApp Image 2025-05-28 at 09.21.35_6d9c1ebe.jpg", "WhatsApp Image 2025-05-28 at 09.21.35_37467b49.jpg", "WhatsApp Image 2025-05-28 at 09.21.35_ba5e9591.jpg"
+    ]
+  },
+  {
+    "tag": [
+      "Parks in Turin"
+    ],
+    "coords": [[45.0560477805264, 7.634577394904036],
+    [45.06177926756974, 7.634967418088486],
+    [45.05971459255539, 7.6285277955916575],
+    [45.05694676954389, 7.629982170223507]
+    ],
+    "color": "green", 
+    "fill_color": "green",
+    "transparency": 0.4,
+    "text": "",
+    "title": "Parco Ruffini",
+    "type": "polygon",
+    "images": [
+      "IMG-20250522-WA0014.jpg", "IMG-20250522-WA0009.jpg", "IMG-20250522-WA0013.jpg", "WhatsApp Image 2025-05-28 at 09.10.53_4c888a1a.jpg", "WhatsApp Image 2025-05-28 at 09.21.34_7b5ecc5e.jpg"
+    ]
+  },
+
+  {
+  "type": "polygon",
+    "tag": ["Parks in Turin"],
+    "coords": [[45.04811158419554, 7.658555055769381],
+    [45.04967058343982, 7.653986347532913],
+    [45.0437255947455, 7.649750195733614],
+    [45.04205613780706, 7.654423753906454]
+    ],
+    "color": "green", 
+    "fill_color": "green",
+    "transparency": 0.4,
+    "title": "Punto Verde & Parco Cavalieri Vittorio Veneto",
+    "text": "",
+    "images": [
+      "IMG-20250522-WA0007.jpg", "IMG-20250522-WA0005.jpg", "IMG-20250522-WA0010.jpg", "WhatsApp Image 2025-05-28 at 09.21.35_2686a9e6.jpg", "WhatsApp Image 2025-05-28 at 09.21.35_76093665.jpg"
+    ]
+  },
+
+
+
+
+  {
+    "tag": [
+      "Neubauten"
+    ],
+    "title": "Museo Nazionale dell'Automobile",
+    "text": "",
+    "type": "marker",
+    "coords": [
+      45.03168,
+      7.67418
+    ],
+    "images": [
+      "MuseoNazionaledellAutomobile_page-0001.jpg",
+      "MuseoNazionaledellAutomobile_page-0002.jpg",
+      "MuseoNazionaledellAutomobile_page-0003.jpg",
+      "MuseoNazionaledellAutomobile_page-0004.jpg",
+      "MuseoNazionaledellAutomobile_page-0005.jpg",
+      "MuseoNazionaledellAutomobile_page-0006.jpg"
+    ]
+  },
+  {
+    "tag": [
+      "Neubauten"
+    ],
+    "title": "Chiesa di Santa Cristina",
+    "text": "",
+    "type": "marker",
+    "coords": [
+      45.0669697,
+      7.6921863
+    ],
+    "images": [
+      "ChiesadiSantaCristina.jpg",
+      "kirche.jpeg"
+    ]
+  },
+  {
+    "tag": [
+      "Neubauten"
+    ],
+    "title": "Museo Nazionale del Cinema",
+    "text": "",
+    "type": "marker",
+    "coords": [
+      45.06911,
+      7.69297
+    ],
+    "images": [
+      "FilmmuseumInhalt_page-0001.jpg",
+      "FilmmuseumInhalt_page-0002.jpg",
+      "Filmmuseum.jpg"
+    ]
+  },
+  {
+    "tag": [
+      "Neubauten"
+    ],
+    "title": "Parco della Dora",
+    "text": "",
+    "type": "marker",
+    "coords": [
+      45.0705,
+      7.6797
+    ],
+    "images": [
+      "Parcodelladora_page-0001.jpg",
+      "Parcodelladora_page-0002.jpg",
+      "Parcodelladora_page-0003.jpg",
+      "parcodora.jpg"
+    ]
+  },
+  {
+    "tag": [
+      "Neubauten"
+    ],
+    "title": "Parco Ignazio Micchelotti",
+    "text": "",
+    "type": "marker",
+    "coords": [
+      45.0657, 7.703
+    ],
+    "images": [
+      "ParcoIgnazioMichelotti_page-0001.jpg",
+      "ParcoIgnazioMichelotti_page-0002.jpg"
+    ]
+  },
+  {
+    "tag": [
+      "Neubauten"
+    ],
+    "title": "Casa dell'Obelisco",
+    "text": "",
+    "type": "marker",
+    "coords": [
+      45.0701, 7.6865
+    ],
+    "images": [
+      "CasadellÔÇÿObelisco-bilder-0.jpg",
+      "CasadellÔÇÿObelisco-bilder-1.jpg"
+    ]
+  },
+  {
+    "tag": [
+      "Neubauten"
+    ],
+    "title": "Torre BBPR",
+    "text": "",
+    "type": "marker",
+    "coords": [
+      45.0700, 7.6840
+    ],
+    "images": [
+      "0001.jpg",
+      "0002.jpg"
+    ]
+  },
+  {
+    "tag": [
+      "Neubauten"
+    ],
+    "title": "Via Gorizia",
+    "text": "",
+    "type": "marker",
+    "coords": [
+      45.0700, 7.6800
+    ],
+    "images": [
+      "0003.jpg",
+      "0004.jpg"
+    ]
+  },
+  {
+    "tag": [
+      "Neubauten"
+    ],
+    "title": "Residenza Negarville",
+    "text": "",
+    "type": "marker",
+    "coords": [
+      45.0702, 7.6820
+    ],
+    "images": [
+      "ResidenzeNegarville_page-0001.jpg",
+      "ResidenzeNegarville_page-0002.jpg"
+    ]
+  },
+  {
+    "tag": [
+      "Neubauten"
+    ],
+    "title": "schönes Haus",
+    "text": "",
+    "type": "marker",
+    "coords": [
+      45.0733840, 7.6794947
+    ],
+    "images": [
+      "Haus.jpeg"
+    ]
+  },
+  {
+    "tag": [
+      "Neubauten"
+    ],
+    "title": "Piazza San Carlo",
+    "text": "",
+    "type": "marker",
+    "coords": [
+      45.06774, 7.68259
+    ],
+    "images": [
+      "SanCarlo.jpg"
+    ]
+  },
+  {
+    "tag": [
+      "Neubauten"
+    ],
+    "title": "Zeitraffer Unterkunft",
+    "text": "",
+    "type": "marker",
+    "coords": [
+      45.1352037, 7.6256305
+    ],
+    "images": [
+      "zeitraffernacht.mov", 
+      "zeitraffer tag.mp4"
+    ]
+  },
+
+  {
+    "tag": ["Historische Architektur"],
+    "title": "Mole Antonelliana",
+    "text": "",
+    "type": "marker",
+    "coords": [45.06938, 7.69305],
+    "images": ["Mole Antonelliana.jpg"]
+  },
+  {
+    "tag": ["Historische Architektur"],
+    "title": "Palazzo Madama",
+    "text": "Mittelalter",
+    "type": "marker",
+    "coords": [45.07036, 7.68703],
+    "images": ["Palazzo Madama.jpg"]
+  },
+  {
+    "tag": ["Historische Architektur"],
+    "title": "Parco Dora",
+    "text": "",
+    "type": "marker",
+    "coords": [45.09240, 7.66363],
+    "images": ["Parco Dora.jpg"]
+  },
+  {
+    "tag": ["Historische Architektur"],
+    "title": "Basilika St-Maria-Helferin",
+    "text": "",
+    "type": "marker",
+    "coords": [45.08025, 7.67540],
+    "images": ["Basilika St-Maria-Helferin.jpg"]
+  },
+  {
+    "tag": ["Historische Architektur"],
+    "title": "Piazza San Carlo",
+    "text": "",
+    "type": "marker",
+    "coords": [45.06856, 7.68650],
+    "images": ["Piazza San Carlo.jpg"]
+  },
+  {
+    "tag": ["Historische Architektur"],
+    "title": "Palazzo Reale di Torino",
+    "text": "Barrock",
+    "type": "marker",
+    "coords": [45.07208, 7.68601],
+    "images": ["Palazzo Reale di Torino.jpg"]
+  },
+  {
+    "tag": ["Historische Architektur"],
+    "title": "Basilica di Santa Maria della Consolazione",
+    "text": "",
+    "type": "marker",
+    "coords": [45.07702, 7.67878],
+    "images": ["Basilica di Santa Maria della Consolazione.jpg"]
+  },
+  {
+    "tag": ["Historische Architektur"],
+    "title": "Parco Ignazio Michelotti",
+    "text": "Verlassener Zoo",
+    "type": "marker",
+    "coords": [45.06568, 7.70321],
+    "images": ["Parco verlasseno.jpg"]
+  },
+  {
+    "tag": ["Historische Architektur"],
+    "title": "Cathedrale di Giovanni battista",
+    "text": "Mittelalter",
+    "type": "marker",
+    "coords": [45.07360, 7.68471],
+    "images": ["Cathedrale di Giovanni battista.jpg"]
+  },
+  {
+    "tag": ["Historische Architektur"],
+    "title": "Porta Platina",
+    "text": "Römische Antike",
+    "type": "marker",
+    "coords": [45.07473, 7.68489],
+    "images": ["Porta Platina.jpg"]
+  },
+  {
+    "tag": ["Historische Architektur"],
+    "title": "Teatro Regio di Torino",
+    "text": "Neorenessance",
+    "type": "marker",
+    "coords": [45.07082, 7.68728],
+    "images": ["Teatro Regio.jpg"]
+  },
+  {
+    "tag": ["Historische Architektur"],
+    "title": "Chiesa di Gesu",
+    "text": "Barrock",
+    "type": "marker",
+    "coords": [45.03514, 7.63484],
+    "images": ["Chiesa di Gesu.jpg"]
+  },
+  {
+    "tag": ["Historische Architektur"],
+    "title": "Castello di Valentino",
+    "text": "Renaissance",
+    "type": "marker",
+    "coords": [45.06211, 7.68583],
+    "images": ["Castello di Valentino.jpg"]
+  },
+  {
+    "tag": ["Historische Architektur"],
+    "title": "Museo Nazionale del Risorgimento Italiano",
+    "text": "Historismus",
+    "type": "marker",
+    "coords": [45.068874, 7.685919],
+    "images": ["Museo Nazionale del Risorgimento Italiano.jpg"]
+  },
+  {
+    "tag": ["Historische Architektur"],
+    "title": "Biblioteca Nazionale Universitaria di Torino",
+    "text": "Historismus",
+    "type": "marker",
+    "coords": [45.068652, 7.687052],
+    "images": ["Biblioteca Nazionale Universitaria di Torino.jpg"]
+  },
+  {
+    "tag": [
+      "Historische Architektur"
+    ],
+    "title": "Ferris Geburtstag Zeichnung",
+    "text": "",
+    "type": "marker",
+    "coords": [
+      45.072056,
+      7.6655
+    ],
+    "images": [
+      "Ferris.jpg"
+    ]
+  },
+  {
+    "tag": [
+      "Historische Architektur"
+    ],
+    "title": "Graffiti Mauer Zeichnung",
+    "text": "",
+    "type": "marker",
+    "coords": [45.092, 7.667],
+    "images": [
+      "Grafiti.jpg"
+    ]
+  },
+  {
+    "tag": [
+      "Musik"
+    ],
+    "title": "Ambient",
+    "text": "",
+    "type": "marker",
+    "coords": [
+      45.090771,
+      7.668264
+    ],
+    "images": [
+      "250513-100224.wav"
+    ]
+  },
+  {
+    "tag": [
+      "Musik"
+    ],
+    "title": "Piazza dell'Annunziata",
+    "text": "",
+    "type": "marker",
+    "coords": [
+      45.134227,
+      7.629017
+    ],
+    "images": [
+      "DJI_0341.jpg"
+    ]
+  },
+  {
+    "tag": [
+      "Musik"
+    ],
+    "title": "Turin",
+    "text": "",
+    "type": "marker",
+    "coords": [
+      45.062675,
+      7.678963
+    ],
+    "images": [
+      "turin.mp3"
+    ]
+  },
+
+  {
+    "tag": [
+      "Zusammenspiel Stadt & Natur"
+    ],
+    "title": "Leerer Zoo",
+    "text": "",
+    "type": "marker",
+    "coords": [
+      45.066448,
+      7.704852
+    ],
+    "images": [
+      "IMG_8257.jpg"
+    ]
+  },
+  
+  {
+    "tag": [
+      "Zusammenspiel Stadt & Natur"
+    ],
+    "title": "Leerer Zoo",
+    "text": "",
+    "type": "marker",
+    "coords": [
+      45.06752,
+      7.707854
+    ],
+    "images": [
+      "IMG_8206.jpg",
+      "IMG_8244.jpg",
+      "Skizzenbuch_Flurin_Seite_09.png"
+    ]
+  },
+  
+  {
+    "tag": [
+      "Zusammenspiel Stadt & Natur"
+    ],
+    "title": "Mittelalter Park",
+    "text": "",
+    "type": "marker",
+    "coords": [
+      45.049773,
+      7.684236
+    ],
+    "images": [
+      "IMG_8176.jpg"
+    ]
+  },
+  
+  {
+    "tag": [
+      "Zusammenspiel Stadt & Natur"
+    ],
+    "title": "Pflanze in der Wand",
+    "text": "",
+    "type": "marker",
+    "coords": [
+      45.066413,
+      7.695243
+    ],
+    "images": [
+      "IMG_8286.jpg",
+      "IMG_3659.jpg"
+    ]
+  },
+  
+  {
+    "tag": ["Zusammenspiel Stadt & Natur"],
+    "title": "Zentrum-Crocetta",
+    "text": "",
+    "type": "marker",
+    "coords": [45.06286, 7.69548],
+    "images": ["IMG_3653.jpg"]
+  },
+  {
+    "tag": ["Zusammenspiel Stadt & Natur"],
+    "title": "Palazzo Nuova",
+    "text": "",
+    "type": "marker",
+    "coords": [45.06852, 7.69455],
+    "images": ["IMG_3660.jpg"]
+  },
+  {
+    "tag": ["Zusammenspiel Stadt & Natur"],
+    "title": "Zentrum",
+    "text": "",
+    "type": "marker",
+    "coords": [45.06367, 7.67737],
+    "images": ["IMG_3671.jpg"]
+  },
+  {
+    "tag": ["Zusammenspiel Stadt & Natur"],
+    "title": "San Paolo",
+    "text": "",
+    "type": "marker",
+    "coords": [45.05781, 7.63711],
+    "images": ["IMG_3812.jpg", "IMG_3813.jpg"]
+  },
+  {
+    "tag": ["Zusammenspiel Stadt & Natur"],
+    "title": "San Paolo",
+    "text": "",
+    "type": "marker",
+    "coords": [45.05970, 7.63647],
+    "images": ["IMG_3819.jpg", "IMG_3820.jpg", "IMG_7347.jpg"]
+  },
+  {
+    "tag": ["Zusammenspiel Stadt & Natur"],
+    "title": "Parco Dora",
+    "text": "",
+    "type": "marker",
+    "coords": [45.09147, 7.66754],
+    "images": ["IMG_3491.jpg", "IMG_3493.jpg", "Skizzenbuch_Flurin_Seite_03.png", "Skizzenbuch_Flurin_Seite_04.png"]
+  },
+  {
+    "tag": ["Zusammenspiel Stadt & Natur"],
+    "title": "San Salvario",
+    "text": "",
+    "type": "marker",
+    "coords": [45.05431, 7.67930],
+    "images": ["IMG_3611.jpg", "IMG_3612.jpg", "IMG_3613.jpg"]
+  },
+  {
+    "type": "marker",
+    "tag": ["Zusammenspiel Stadt & Natur"],
+    "coords": [45.05615, 7.68526],
+    "title": "San Salvario",
+    "text": "Eine wilde Rebe",
+    "images": [
+      "IMG_7243.jpg",
+      "IMG_7245.jpg",
+      "IMG_7248.jpg",
+      "IMG_7250.jpg",
+      "IMG_3591.jpg", "IMG_3597.jpg", "IMG_3598.jpg", "IMG_3599.jpg", "Skizzenbuch_Flurin_Seite_21.png"
+    ]
+  },
+  {
+    "type": "marker",
+    "tag": ["Zusammenspiel Stadt & Natur"],
+    "coords": [45.05429, 7.68433],
+    "title": "Tramstation San Salvario",
+    "text": "",
+    "images": [
+      "IMG_7237.jpg",
+      "IMG_7240.jpg",
+      "IMG_7241.jpg"
+    ]
+  },
+  {
+    "type": "marker",
+    "tag": ["Zusammenspiel Stadt & Natur"],
+    "coords": [45.04617, 7.65804],
+    "title": "Caserma Morelli di Popolo",
+    "text": "",
+    "images": [
+      "IMG_7189.jpg",
+      "IMG_7197.jpg",
+      "IMG_7199.jpg",
+      "IMG_8081.jpg",
+      "IMG_8101.jpg",
+      "IMG_3512.jpg", "IMG_3513.jpg", "IMG_3514.jpg", "IMG_3515.jpg", "IMG_3516.jpg"
+    ]
+  },
+  {
+    "type": "marker",
+    "tag": ["Zusammenspiel Stadt & Natur"],
+    "coords": [45.04416, 7.66281],
+    "title": "Lingotto",
+    "text": "",
+    "images": [
+      "IMG_3523.jpg",
+      "IMG_7201.jpg",
+      "IMG_7203.jpg",
+      "IMG_8115.jpg",
+      "IMG_3519.jpg", "IMG_3520.jpg", "IMG_3521.jpg", "IMG_3523.jpg", "IMG_3524.jpg", "IMG_3525.jpg"
+    ]
+  },
+  {
+    "type": "marker",
+    "tag": ["Zusammenspiel Stadt & Natur"],
+    "coords": [45.04483, 7.67488],
+    "title": "San Salvario",
+    "text": "",
+    "images": [
+      "IMG_7206.jpg",
+      "IMG_8127.jpg"
+    ]
+  },
+  {
+    "type": "marker",
+    "tag": ["Zusammenspiel Stadt & Natur"],
+    "coords": [45.13469, 7.62633],
+    "title": "Venaria Reale (Unterkunft)",
+    "text": "",
+    "images": [
+      "IMG_7355.jpg", "Skizzenbuch_Flurin_Seite_18.png"
+    ]
+  },
+  {
+    "type": "marker",
+    "tag": ["Zusammenspiel Stadt & Natur"],
+    "coords": [45.05886, 7.63745],
+    "title": "San Paolo",
+    "text": "",
+    "images": [
+      "IMG_7345.jpg",
+      "IMG_3815.jpg"
+    ]
+  },
+  {
+    "type": "marker",
+    "tag": ["Zusammenspiel Stadt & Natur"],
+    "coords": [45.07160, 7.69014],
+    "title": "Giardini Reali",
+    "text": "",
+    "images": [
+      "IMG_8310.jpg", "IMG_3667.jpg", "IMG_3668.jpg", "Skizzenbuch_Flurin_Seite_13.png"
+    ]
+  },
+  {
+    "type": "marker",
+    "tag": ["Zusammenspiel Stadt & Natur"],
+    "coords": [45.06962, 7.69262],
+    "title": "Centro",
+    "text": "",
+    "images": [
+      "IMG_7304.jpg",
+      "IMG_7305.jpg",
+      "IMG_3663.jpg"
+    ]
+  },
+  {
+    "type": "marker",
+    "tag": ["Zusammenspiel Stadt & Natur"],
+    "coords": [45.06684, 7.67194],
+    "title": "Centro",
+    "text": "",
+    "images": [
+      "IMG_7310.jpg"
+    ]
+  },
+  {
+    "type": "marker",
+    "tag": ["Zusammenspiel Stadt & Natur"],
+    "coords": [45.05401, 7.68498],
+    "title": "Parco del Valentione",
+    "text": "",
+    "images": [
+      "IMG_7233.jpg",
+      "IMG_7234.jpg",
+      "IMG_7235.jpg",
+      "IMG_7236.jpg"
+    ]
+  },
+  {
+    "type": "marker",
+    "tag": ["Zusammenspiel Stadt & Natur"],
+    "coords": [45.06606, 7.70348],
+    "title": "Borgo Po",
+    "text": "",
+    "images": [
+      "IMG_7281.jpg",
+      "IMG_7285.jpg",
+      "IMG_8242.jpg"      
+    ]
+  },
+  {
+    "type": "marker",
+    "tag": ["Zusammenspiel Stadt & Natur"],
+    "coords": [45.04714, 7.68223],
+    "title": "San Salvario",
+    "text": "",
+    "images": [
+      "IMG_7208.jpg"    
+    ]
+  },
+  {
+    "type": "marker",
+    "tag": ["Zusammenspiel Stadt & Natur"],
+    "coords": [45.07254, 7.69141],
+    "title": "Giardini Reali",
+    "text": "",
+    "images": [
+      "IMG_7307.jpg"
+    ]
+  },
+  {
+    "type": "marker",
+    "tag": ["Zusammenspiel Stadt & Natur"],
+    "coords": [45.05509, 7.67882],
+    "title": "Chiesa Sacro Cuore di Maria",
+    "text": "",
+    "images": [
+      "Skizzenbuch_Flurin_Seite_17.png"
+    ]
+  },
+  {
+    "type": "marker",
+    "tag": ["Zusammenspiel Stadt & Natur"],
+    "coords": [45.07025, 7.68704],
+    "title": "Turin Centro",
+    "text": "",
+    "images": [
+      "Skizzenbuch_Flurin_Seite_15.png"
+    ]
+  },
+  {
+    "type": "marker",
+    "tag": ["Zusammenspiel Stadt & Natur"],
+    "coords": [45.06390, 7.69964],
+    "title": "Borgo Po",
+    "text": "",
+    "images": [
+      "Skizzenbuch_Flurin_Seite_16.png"
+    ]
+  },
+
+
+  {
+    "type": "marker",
+    "tag": ["Zusammenspiel Stadt & Natur"],
+    "coords": [45.06641, 7.70563],
+    "title": "Borgo Po",
+    "text": "Nebelkrähe",
+    "images": [
+      "IMG_3628.jpg",
+      "IMG_3629.jpg"    
+    ]
+  },
+  {
+    "type": "marker",
+    "tag": ["Zusammenspiel Stadt & Natur"],
+    "coords": [45.04569, 7.65157],
+    "title": "Parco Cavalieri di Vittorio Veneto",
+    "text": "Schildkröte",
+    "images": [
+      "IMG_7192.jpg",
+      "IMG_8064.jpg"    
+    ]
+  },
+  {
+    "type": "marker",
+    "tag": ["Zusammenspiel Stadt & Natur"],
+    "coords": [45.04968, 7.68418],
+    "title": "Giardino Roccioso",
+    "text": "Grauhörnchen & Stockente",
+    "images": [
+      "IMG_8188.jpg",
+      "IMG_3568.jpg",
+      "IMG_8198.jpg",
+      "IMG_7224.jpg",
+      "IMG_7229.jpg" 
+    ]
+  },
+
+
+  {
+    "type": "marker",
+    "tag": ["BI & BG Lehrpersonen"],
+    "coords": [45.04927494918871, 7.6851839235600305],
+    "title": "Borgo Medievale",
+    "text": "",
+    "images": [
+      "IMG_0033.jpg"
+    ]
+  },
+  {
+    "type": "marker",
+    "tag": ["BI & BG Lehrpersonen"],
+    "coords": [45.03321185799724, 7.666156067738069],
+    "title": "La Pista 500",
+    "text": "",
+    "images": [
+      "Lingotto_Teststrecke_1.JPG",
+      "Lingotto_Teststrecke_2a.JPG",
+      "Lingotto_Teststrecke_2b.JPG",
+      "IMG_0002.jpg",
+      "IMG_0026.jpg",
+      "IMG_9997.jpg",
+      "Lingotto_Torino.JPG",
+      "Lingotto_Dachgarten.JPG"
+    ]
+  },
+  {
+    "type": "marker",
+    "tag": ["BI & BG Lehrpersonen"],
+    "coords": [45.033219424268516, 7.673227795341918],
+    "title": "Museo Nazionale dell'Automobile",
+    "text": "",
+    "images": [
+      "IMG_9985.jpg",
+      "IMG_9990.jpg",
+      "Ur_Fiat_Multipla.JPG",
+      "Rennwagen_16Cyl_Sternmotor_Augusto_Monaco_1935.JPG"
+    ]
+  },
+  {
+    "type": "marker",
+    "tag": ["BI & BG Lehrpersonen"],
+    "coords": [45.0918, 7.665],
+    "title": "Parco Dora",
+    "text": "",
+    "images": [
+      "IMG_9882.jpg",
+      "IMG_9886.jpg",
+      "IMG_9888.jpg",
+      "IMG_9895.jpg",
+      "IMG_9900.jpg",
+      "IMG_9907.jpg",
+      "IMG_9908.jpg",
+      "MVI_9880.mov",
+      "Parco_Dora_1.JPG",
+      "Parco_Dora_2.JPG",
+      "Parco_Dora_3.JPG",
+      "Parco_Dora_4.JPG",
+      "Parco_Dora_5.JPG"
+    ]
+  },
+  {
+    "type": "marker",
+    "tag": ["BI & BG Lehrpersonen"],
+    "coords": [45.06601752048734, 7.7030727067463225],
+    "title": "Parco Ignazio Michelotti (alter Zoo)",
+    "text": "",
+    "images": [
+      "IMG_9924.jpg",
+      "IMG_9925.jpg",
+      "IMG_9926.jpg",
+      "IMG_9930.jpg",
+      "IMG_9963.jpg",
+      "IMG_9966.jpg"
+    ]
+  },
+  {
+    "type": "marker",
+    "tag": ["BI & BG Lehrpersonen"],
+    "coords": [45.13558868433082, 7.629073481518873],
+    "title": "Venaria Reale",
+    "text": "",
+    "images": [
+      "IMG_0034.jpg",
+      "IMG_0039.jpg"
+    ]
+  },
+  {
+    "type": "marker",
+    "tag": ["BI & BG Lehrpersonen"],
+    "coords": [45.062843, 7.695396],
+    "title": "Ponte Vittorio Emanuele I",
+    "text": "",
+    "images": [
+      "Ponte_Vittorio_Emanuele_I.JPG"
+    ]
+  }
+]
